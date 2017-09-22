@@ -27,12 +27,11 @@ public class MainActivityTest {
     @Before
     public void init() {
         mainActivity = mainActivityActivityTestRule.getActivity();
-        userInputNumber = "1234";
-        onView(withId(R.id.guess_input_text)).perform(clearText(), typeText(userInputNumber));
     }
 
     @Test
     public void testInputTextIsEqualAsWeTypeIn() {
+        userInputNumber = "1234";
         onView(withId(R.id.guess_input_text)).check(matches(withText(userInputNumber)));
     }
 
@@ -50,8 +49,8 @@ public class MainActivityTest {
 
     @Test
     public void testUserInputNumberIsTooGreater() throws NoSuchFieldException, IllegalAccessException {
-        setupAndPerformButtonClicked("1000");
-        onView(withText(String.format(mainActivity.getResources().getString(R.string.incorrect_message), "น้อย"))).inRoot(withDecorView(not(mainActivity.getWindow().getDecorView()))).check(matches(isDisplayed()));
+        setupAndPerformButtonClicked("2000");
+        onView(withText(String.format(mainActivity.getResources().getString(R.string.incorrect_message), "มาก"))).inRoot(withDecorView(not(mainActivity.getWindow().getDecorView()))).check(matches(isDisplayed()));
     }
 
     private void setupAndPerformButtonClicked(String userInput) throws NoSuchFieldException, IllegalAccessException {
