@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Guess Me</string>
+    <string name="guess_button">Guess</string>
+    <string name="correct_message">คุณทายถูก ตัวเลขที่ถูกต้องคือ %d</string>
+    <string name="incorrect_message">ตัวเลขที่คุณกรอก%sเกินไป</string>
+    <string name="new_game">เริ่มเกมส์ใหม่</string>
+    <string name="invalid_input_message">กรุณาทายตัวเลขตั้งแต่ 1000 ถึง 9999</string>
+</resources>
