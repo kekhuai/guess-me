@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
 
                 @Override
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    t.printStackTrace();
                 }
             });
         } else {
